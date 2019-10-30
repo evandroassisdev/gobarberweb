@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
   rules: {
+    'import/no-named-as-default': 0,
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'import/prefer-default-export': 'off',
@@ -32,6 +33,11 @@ module.exports = {
     'no-console': ['error', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-props-no-spreading': [
+      {
+        explicitSpread: 'ignore' | 'enforce',
+      },
+    ],
   },
   // settings: {
   //   'import/resolver': {
